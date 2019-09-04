@@ -9,6 +9,8 @@ class Theme extends \yii\base\Component
 
     const DETAIL_VIEW = DetailView::class;
 
+    const ACTION_MENU = ActionMenu::class;
+
     const ASSETS = Assets::class;
 
     public function widget(string $class, array $params = [])
@@ -31,6 +33,11 @@ class Theme extends \yii\base\Component
     public function detailView(array $params = [])
     {
         return $this->widget(static::DETAIL_VIEW, $params);
+    }
+
+    public function actionMenu(array $params = [])
+    {
+        return $this->widget(static::ACTION_MENU, $params);
     }
 
 }
