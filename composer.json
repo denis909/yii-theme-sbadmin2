@@ -1,0 +1,9 @@
+{
+    "name": "denis909/yii-theme-sbadmin2",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "denis909\\yii\\themes\\sbadmin2": ""
+        }
+    }
+}
