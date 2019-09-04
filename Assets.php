@@ -28,7 +28,8 @@ class Assets extends AssetBundle
         'yii\web\YiiAsset',
         'yii\web\JqueryAsset',
         'yii\bootstrap4\BootstrapAsset',
-        'yii\bootstrap4\BootstrapPluginAsset'
+        'yii\bootstrap4\BootstrapPluginAsset',
+        'denis909\yii\glyphicons\GlyphiconsAsset'
     ];
 
     public function init()

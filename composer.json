@@ -1,8 +1,8 @@
 {
     "name": "denis909/yii-theme-sbadmin2",
-    "license": "MIT",
     "require": {
-        "npm-asset/startbootstrap-sb-admin-2": "*"
+        "npm-asset/startbootstrap-sb-admin-2": "*",
+        "denis909/yii-glyphicons": "*"
     },
     "autoload": {
         "psr-4": {

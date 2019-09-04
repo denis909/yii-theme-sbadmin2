@@ -16,7 +16,7 @@ class ActionMenu extends \yii\widgets\Menu
     {
         $options = ArrayHelper::getValue($item, 'linkOptions');
 
-        if (array_key_exists('class', $options))
+        if (!array_key_exists('class', $options))
         {
             $options['class'] = 'd-none d-sm-inline-block btn btn-sm btn-primary shadow-sm';
         }
