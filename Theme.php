@@ -9,6 +9,20 @@ class Theme extends \yii\base\Component
 
     const DETAIL_VIEW = DetailView::class;
 
+    const ASSETS = Assets::class;
+
+    public function widget(string $class, array $params = [])
+    {
+        return $class::widget($params);
+    }
+
+    public function registerAssets($view)
+    {
+        $class = static::ASSETS;     
+
+        return $class::register($view);
+    }
+
     public function gridView(array $params = [])
     {
         return $this->widget(static::GRID_VIEW, $params);
@@ -17,11 +31,6 @@ class Theme extends \yii\base\Component
     public function detailView(array $params = [])
     {
         return $this->widget(static::DETAIL_VIEW, $params);
-    }
-
-    public function widget(string $class, array $params = [])
-    {
-        return $class::widget($params);
     }
 
 }
