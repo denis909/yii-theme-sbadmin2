@@ -5,6 +5,8 @@ namespace denis909\yii\themes\sbadmin2;
 class Theme extends \yii\base\Component
 {
 
+    const LAYOUT = Layout::class;
+
     const GRID_VIEW = GridView::class;
 
     const DETAIL_VIEW = DetailView::class;
@@ -12,6 +14,10 @@ class Theme extends \yii\base\Component
     const ACTION_MENU = ActionMenu::class;
 
     const ASSETS = Assets::class;
+
+    const ACTION_COLUMN = ActionColumn::class;
+
+    protected $_layout;
 
     public function widget(string $class, array $params = [])
     {
@@ -38,6 +44,20 @@ class Theme extends \yii\base\Component
     public function actionMenu(array $params = [])
     {
         return $this->widget(static::ACTION_MENU, $params);
+    }
+
+    public function beginLayout()
+    {
+        $class = static::LAYOUT;
+
+        $this->_layout = $class::begin();
+    }
+
+    public function endLayout()
+    {
+        $class = static::LAYOUT;
+
+        $class::end();
     }
 
 }
