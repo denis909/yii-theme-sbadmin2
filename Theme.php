@@ -1,6 +1,6 @@
 <?php
 
-namespace denis909\yii\themes\sbadmin2;
+namespace denis909\sbadmin2;
 
 class Theme extends \yii\base\Component
 {
