@@ -19,6 +19,8 @@ class Theme extends \yii\base\Component
 
     const ACTION_MENU = ActionMenu::class;
 
+    const MAIN_MENU = MainMenu::class;    
+
     const ASSETS = Assets::class;
 
     const ACTION_COLUMN = ActionColumn::class;
@@ -53,6 +55,11 @@ class Theme extends \yii\base\Component
     {
         return $this->widget(static::ACTION_MENU, $params);
     }
+
+    public function mainMenu(array $params = [])
+    {
+        return $this->widget(static::MAIN_MENU, $params);
+    }    
 
     public function loginLayout(array $params = [])
     {

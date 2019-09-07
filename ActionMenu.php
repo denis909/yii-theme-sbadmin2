@@ -40,4 +40,14 @@ class ActionMenu extends \yii\widgets\Menu
         return parent::renderItem($item);
     }
 
+    public function run()
+    {
+        if (!$this->items)
+        {
+            return;
+        }
+
+        return parent::run();
+    }
+
 }

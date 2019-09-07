@@ -11,4 +11,6 @@ class GridView extends \yii\grid\GridView
 
     public $pager = ['class' => LinkPager::class];
 
+    public $theme;
+
 }

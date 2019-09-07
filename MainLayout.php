@@ -19,7 +19,7 @@ class MainLayout extends \yii\base\Widget
 
     public $user;
 
-    public $logoutUrl;
+    public $logoutUrl = ['/site/logout'];
 
     public function run()
     {

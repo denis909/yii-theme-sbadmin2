@@ -17,7 +17,7 @@ $items = ArrayHelper::merge(
                 <hr class="sidebar-divider my-0">'
         ]
     ],
-    $mainMenu,
+    $mainMenu ? $mainMenu : [],
     [
         [
             'template' => '<!-- Divider -->
@@ -34,18 +34,7 @@ $items = ArrayHelper::merge(
     ]
 );
 
-echo yii\widgets\Menu::widget([
-    'options' => [
-        'id' => 'accordionSidebar',
-        'class' => 'navbar-nav bg-gradient-primary sidebar sidebar-dark accordion'
-    ],
-    'encodeLabels' => false,
-    'items' => $items,
-    'itemOptions' => [
-        'class' => 'nav-item'
-    ],
-    'linkTemplate' => '<a class="nav-link" href="{url}">{label}</a>'
-]);
+echo $theme->mainMenu(['items' => $items]);
 
 /*
 
