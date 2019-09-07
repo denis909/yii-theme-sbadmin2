@@ -3,6 +3,8 @@
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 
+$theme->registerAssets($this);
+
 ?>
 <?php $this->beginPage();?>
 <!DOCTYPE html>

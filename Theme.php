@@ -5,9 +5,13 @@ namespace denis909\sbadmin2;
 class Theme extends \yii\base\Component
 {
 
+    const POPUP = Popup::class;
+
     const LAYOUT = Layout::class;
 
     const LOGIN_LAYOUT = LoginLayout::class;
+
+    const MAIN_LAYOUT = MainLayout::class;
 
     const GRID_VIEW = GridView::class;
 
@@ -53,13 +57,25 @@ class Theme extends \yii\base\Component
     public function loginLayout(array $params = [])
     {
         return $this->widget(static::LOGIN_LAYOUT, $params);
-    }    
+    }
 
-    public function beginLayout()
+    public function mainLayout(array $params = [])
     {
+        return $this->widget(static::MAIN_LAYOUT, $params);
+    }
+
+    public function popup(array $params = [])
+    {
+        return $this->widget(static::POPUP, $params);
+    }
+
+    public function beginLayout(array $params = [])
+    {
+        $params['theme'] = $this;
+
         $class = static::LAYOUT;
 
-        $this->_layout = $class::begin();
+        $this->_layout = $class::begin($params);
     }
 
     public function endLayout()

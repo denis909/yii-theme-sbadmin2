@@ -4,6 +4,8 @@ use yii\helpers\Html;
 
 $this->params['bodyClass'] = 'bg-gradient-primary';
 
+$theme->beginLayout();
+
 ?>
 <div class="container">
     <!-- Outer Row -->
@@ -28,3 +30,4 @@ $this->params['bodyClass'] = 'bg-gradient-primary';
         </div>
     </div>
 </div>
+<?php $theme->endLayout();?>
