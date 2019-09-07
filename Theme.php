@@ -7,6 +7,8 @@ class Theme extends \yii\base\Component
 
     const POPUP = Popup::class;
 
+    const INFOCARD = Infocard::class;
+
     const LAYOUT = Layout::class;
 
     const LOGIN_LAYOUT = LoginLayout::class;
@@ -27,6 +29,29 @@ class Theme extends \yii\base\Component
 
     protected $_layout;
 
+    public function registerAssets($view)
+    {
+        $class = static::ASSETS;     
+
+        return $class::register($view);
+    }    
+
+    public function beginLayout(array $params = [])
+    {
+        $params['theme'] = $this;
+
+        $class = static::LAYOUT;
+
+        $this->_layout = $class::begin($params);
+    }
+
+    public function endLayout()
+    {
+        $class = static::LAYOUT;
+
+        $class::end();
+    }
+
     public function widget(string $class, array $params = [])
     {
         $params['theme'] = $this;
@@ -34,11 +59,9 @@ class Theme extends \yii\base\Component
         return $class::widget($params);
     }
 
-    public function registerAssets($view)
+    public function layout(array $params = [])
     {
-        $class = static::ASSETS;     
-
-        return $class::register($view);
+        return $this->widget(static::LAYOUT, $params);
     }
 
     public function gridView(array $params = [])
@@ -76,20 +99,9 @@ class Theme extends \yii\base\Component
         return $this->widget(static::POPUP, $params);
     }
 
-    public function beginLayout(array $params = [])
+    public function infocard(array $params = [])
     {
-        $params['theme'] = $this;
-
-        $class = static::LAYOUT;
-
-        $this->_layout = $class::begin($params);
-    }
-
-    public function endLayout()
-    {
-        $class = static::LAYOUT;
-
-        $class::end();
-    }
+        return $this->widget(static::INFOCARD, $params);
+    }    
 
 }

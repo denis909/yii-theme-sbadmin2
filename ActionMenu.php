@@ -16,7 +16,7 @@ class ActionMenu extends \yii\widgets\Menu
 
     protected function renderLink($item)
     {
-        $options = ArrayHelper::getValue($item, 'linkOptions');
+        $options = ArrayHelper::getValue($item, 'linkOptions', []);
 
         if (!array_key_exists('class', $options))
         {
