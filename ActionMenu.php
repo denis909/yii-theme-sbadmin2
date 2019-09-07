@@ -8,6 +8,8 @@ use yii\helpers\ArrayHelper;
 class ActionMenu extends \yii\widgets\Menu
 {
 
+    public $theme;
+
     public $options = ['tag' => false];
 
     public $itemOptions = ['tag' => false];

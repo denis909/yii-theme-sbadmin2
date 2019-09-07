@@ -2,7 +2,7 @@
 
 namespace denis909\sbadmin2;
 
-class Layout extends \yii\base\Widget
+class LoginLayout extends \yii\base\Widget
 {
 
     public $content;
@@ -11,7 +11,7 @@ class Layout extends \yii\base\Widget
 
     public function run()
     {
-        return $this->render('layout', [
+        return $this->render('login-layout', [
             'content' => $this->content,
             'theme' => $this->theme
         ]);

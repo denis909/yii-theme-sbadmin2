@@ -7,6 +7,8 @@ class Theme extends \yii\base\Component
 
     const LAYOUT = Layout::class;
 
+    const LOGIN_LAYOUT = LoginLayout::class;
+
     const GRID_VIEW = GridView::class;
 
     const DETAIL_VIEW = DetailView::class;
@@ -21,6 +23,8 @@ class Theme extends \yii\base\Component
 
     public function widget(string $class, array $params = [])
     {
+        $params['theme'] = $this;
+
         return $class::widget($params);
     }
 
@@ -45,6 +49,11 @@ class Theme extends \yii\base\Component
     {
         return $this->widget(static::ACTION_MENU, $params);
     }
+
+    public function loginLayout(array $params = [])
+    {
+        return $this->widget(static::LOGIN_LAYOUT, $params);
+    }    
 
     public function beginLayout()
     {
