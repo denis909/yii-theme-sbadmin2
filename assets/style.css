@@ -1,0 +1,14 @@
+select.form-control.is-invalid
+{
+    background-image: none;
+}
+
+input.form-control.is-invalid
+{
+    background-image: none;
+}
+
+textarea.form-control.is-invalid
+{
+    background-image: none;
+}
