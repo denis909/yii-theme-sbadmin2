@@ -1,16 +1,24 @@
 <?php
 
+use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\helpers\ArrayHelper;
+
+if ($logoUrl)
+{
+    $logo = Html::img($logoUrl, ['height' => '24px']);
+}
+else
+{
+    $logo = '<div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-laugh-wink"></i></div>';
+}
 
 $items = ArrayHelper::merge(
     [
         [
             'template' => '<!-- Sidebar - Brand -->
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="' . Url::to(['/']) . '">
-                <div class="sidebar-brand-icon rotate-n-15">
-                  <i class="fas fa-laugh-wink"></i>
-                </div>
+                ' . $logo . '
                 <div class="sidebar-brand-text mx-3">' . Yii::$app->name . '</div>
                 </a>
                 <!-- Divider -->

@@ -5,7 +5,7 @@ namespace denis909\sbadmin2;
 class LinkPager extends \yii\widgets\LinkPager
 {
 
-    public $options = ['class' => 'pagination', 'style' => 'display: inline-flex;'];
+    public $options = ['class' => 'pagination', 'style' => 'justify-content: flex-end;' /*'style' => 'display: inline-flex;'*/];
 
     public $pageCssClass = 'paginate_button page-item';
 

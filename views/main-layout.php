@@ -71,15 +71,19 @@ $theme->beginLayout();
   </div>
   <!-- End of Main Content -->
 
-  <!-- Footer -->
-  <footer class="sticky-footer bg-white">
+<?php if($copyright):?>
+
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
     <div class="container my-auto">
-      <div class="copyright text-center my-auto">
-        <span>Copyright &copy; Your Website 2019</span>
-      </div>
+        <div class="copyright text-center my-auto">
+            <span><?= $copyright;?></span>
+        </div>
     </div>
-  </footer>
-  <!-- End of Footer -->
+</footer>
+<!-- End of Footer -->
+
+<?php endif;?>
 
 </div>
 <!-- End of Content Wrapper -->
