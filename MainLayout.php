@@ -25,6 +25,12 @@ class MainLayout extends \yii\base\Widget
 
     public $logoUrl;
 
+    public $errorMessages = [];
+
+    public $successMessages = [];
+
+    public $infoMessages = [];
+
     public function run()
     {
         return $this->render('main-layout', [
@@ -37,7 +43,10 @@ class MainLayout extends \yii\base\Widget
             'user' => $this->user,
             'logoutUrl' => $this->logoutUrl,
             'copyright' => $this->copyright,
-            'logoUrl' => $this->logoUrl
+            'logoUrl' => $this->logoUrl,
+            'errorMessages' => (array) $this->errorMessages,
+            'infoMessages' => (array) $this->infoMessages,
+            'successMessages' => (array) $this->successMessages
         ]);
     }
 

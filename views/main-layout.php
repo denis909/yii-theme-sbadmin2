@@ -46,7 +46,11 @@ $theme->beginLayout();
         ?>
       </div>
 
-      <?php if(array_key_exists('enableCard', $this->params) && $this->params['enableCard']):?>
+        <?= $theme->alertMessages(['messages' => $successMessages, 'type' => 'success']);?>
+        <?= $theme->alertMessages(['messages' => $infoMessages, 'type' => 'info']);?>
+        <?= $theme->alertMessages(['messages' => $errorMessages, 'type' => 'error']);?>
+
+        <?php if(array_key_exists('enableCard', $this->params) && $this->params['enableCard']):?>
 
             <div class="card shadow mb-4">
                 <?php if(!empty($this->params['cardTitle'])):?>  
@@ -55,11 +59,13 @@ $theme->beginLayout();
                 </div>
                 <?php endif;?>
                 <div class="card-body">
+
+                    
                     <?= $content;?>
                 </div>
             </div>
 
-      <?php else:?>
+        <?php else:?>
 
         <?= $content;?>
 

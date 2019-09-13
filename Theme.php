@@ -7,6 +7,8 @@ class Theme extends \yii\base\Component
 
     const POPUP = Popup::class;
 
+    const ALERT_MESSAGES = AlertMessages::class;
+
     const INFOCARD = Infocard::class;
 
     const LAYOUT = Layout::class;
@@ -103,5 +105,10 @@ class Theme extends \yii\base\Component
     {
         return $this->widget(static::INFOCARD, $params);
     }    
+
+    public function alertMessages(array $params = [])
+    {
+        return $this->widget(static::ALERT_MESSAGES, $params);
+    } 
 
 }
