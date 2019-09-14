@@ -1,8 +1,8 @@
 {
-    "name": "denis909/yii-theme-sbadmin2",
+    "name": "denis909/yii2-theme-sbadmin2",
     "require": {
         "npm-asset/startbootstrap-sb-admin-2": "*",
-        "denis909/yii-glyphicons": "*"
+        "denis909/yii2-glyphicons": "*"
     },
     "autoload": {
         "psr-4": {
