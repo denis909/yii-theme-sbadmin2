@@ -27,7 +27,7 @@ class Assets extends AssetBundle
         'yii\web\JqueryAsset',
         'yii\bootstrap4\BootstrapAsset',
         'yii\bootstrap4\BootstrapPluginAsset',
-        'denis909\yii\glyphicons\GlyphiconsAsset',
+        'denis909\glyphicons\GlyphiconsAsset',
         AssetsLocal::class
     ];
 
