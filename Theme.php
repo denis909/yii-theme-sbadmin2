@@ -23,6 +23,8 @@ class Theme extends \yii\base\Component
 
     const ACTION_MENU = ActionMenu::class;
 
+    const USER_MENU = UserMenu::class;
+
     const MAIN_MENU = MainMenu::class;    
 
     const ASSETS = Assets::class;
@@ -79,6 +81,11 @@ class Theme extends \yii\base\Component
     public function actionMenu(array $params = [])
     {
         return $this->widget(static::ACTION_MENU, $params);
+    }
+
+    public function userMenu(array $params = [])
+    {
+        return $this->widget(static::USER_MENU, $params);
     }
 
     public function mainMenu(array $params = [])

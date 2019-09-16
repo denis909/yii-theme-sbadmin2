@@ -11,6 +11,8 @@ class MainLayout extends \yii\base\Widget
 
     public $actionMenu;
 
+    public $userMenu = [];
+
     public $mainMenu;
 
     public $enableCard;
@@ -37,6 +39,7 @@ class MainLayout extends \yii\base\Widget
             'content' => $this->content,
             'theme' => $this->theme,
             'actionMenu' => $this->actionMenu,
+            'userMenu' => $this->userMenu,
             'mainMenu' => $this->mainMenu,
             'enableCard' => $this->enableCard,
             'cardTitle' => $this->cardTitle,
