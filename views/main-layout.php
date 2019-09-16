@@ -58,9 +58,7 @@ $theme->beginLayout();
                     <h6 class="m-0 font-weight-bold text-primary"><?= $this->params['cardTitle'];?></h6>
                 </div>
                 <?php endif;?>
-                <div class="card-body">
-
-                    
+                <div class="card-body">                    
                     <?= $content;?>
                 </div>
             </div>

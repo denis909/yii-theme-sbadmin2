@@ -38,6 +38,11 @@ class UserMenu extends \yii\widgets\Menu
 
     protected function renderItem($item)
     {
+        if (array_key_exists('content', $item))
+        {
+            return $item['content'];
+        }
+
         if (empty($item['template']))
         {
             $item['template'] = $this->renderLink($item);
@@ -53,6 +58,11 @@ class UserMenu extends \yii\widgets\Menu
 
     public function run()
     {
+        if ($this->items)
+        {
+            $this->items[] = ['content' => '<div class="dropdown-divider"></div>'];
+        }
+
         $this->items[] = [
             'label' => 'Logout',
             'url' => '#',

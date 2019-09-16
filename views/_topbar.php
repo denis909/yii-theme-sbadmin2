@@ -176,7 +176,7 @@ use yii\helpers\Html;
          
         </a>
 
-        <?= $theme->userMenu($userMenu);?>
+        <?= $theme->userMenu(['items' => $userMenu]);?>
 
         <?php
 
