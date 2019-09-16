@@ -33,6 +33,10 @@ class MainLayout extends \yii\base\Widget
 
     public $infoMessages = [];
 
+    public $messagesUrl;
+
+    public $messagesCount = 0;
+
     public function run()
     {
         return $this->render('main-layout', [
@@ -49,7 +53,9 @@ class MainLayout extends \yii\base\Widget
             'logoUrl' => $this->logoUrl,
             'errorMessages' => (array) $this->errorMessages,
             'infoMessages' => (array) $this->infoMessages,
-            'successMessages' => (array) $this->successMessages
+            'successMessages' => (array) $this->successMessages,
+            'messagesCount' => $this->messagesCount,
+            'messagesUrl' => $this->messagesUrl
         ]);
     }
 

@@ -13,7 +13,6 @@ use yii\helpers\Html;
 
   <!-- Topbar Navbar -->
   <ul class="navbar-nav ml-auto">
-
     <?php
     /*
 
@@ -92,6 +91,20 @@ use yii\helpers\Html;
     </li>
 
     */?>
+
+    <?php if($messagesUrl):?>
+
+    <li class="nav-item dropdown no-arrow mx-1">
+      <a class="nav-link" href="<?= $messagesUrl;?>">
+        <i class="fas fa-envelope fa-fw"></i>
+        <!-- Counter - Messages -->
+        <?php if($messagesCount):?>
+            <span class="badge badge-danger badge-counter"><?= $messagesCount;?></span>
+        <?php endif;?>
+      </a>
+    </li>
+
+    <?php endif;?>
 
     <?php
 
