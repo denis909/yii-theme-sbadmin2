@@ -2,10 +2,9 @@
 
 namespace denis909\sbadmin2;
 
-use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 
-class MainMenu extends \yii\widgets\Menu
+class MainMenu extends \denis909\yii\Menu
 {
 
     public $theme;
@@ -17,10 +16,21 @@ class MainMenu extends \yii\widgets\Menu
 
     public $encodeLabels = false;
 
-    public $itemOptions = [
-        'class' => 'nav-item'
-    ];
+    public $itemOptions = ['class' => 'nav-item'];
 
-    public $linkTemplate = '<a class="nav-link" href="{url}">{label}</a>';
+    public $linkOptions = ['class' => 'nav-link'];
+
+    public $iconTemplate = '<i class="{icon}"></i> <span>{label}</span>';
+
+    public $submenuTemplate = '<div id="{id}" class="collapse"><div class="bg-white py-2 collapse-inner rounded">{items}</div></div>';
+
+    public $labelTemplate = '<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#{id}">{label}</a>';
+
+    public $submenuItem = [
+        'options' => [
+            'tag' => false
+        ],
+        'template' => '<a class="collapse-item" href="{url}">{label}</a>' 
+    ];
     
 }
