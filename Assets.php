@@ -31,13 +31,4 @@ class Assets extends AssetBundle
         AssetsLocal::class
     ];
 
-    public function init()
-    {
-        parent::init();
-
-        require_once __DIR__ . '/BootstrapAsset.php';
-        
-        require_once __DIR__ . '/BootstrapPluginAsset.php';        
-    }
-
 }
