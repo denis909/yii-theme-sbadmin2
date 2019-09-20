@@ -56,7 +56,7 @@ class Theme extends \denis909\theme\Theme
         $class::end();
     }
 
-    public function widget(string $class, array $params = [])
+    public function widget($class, array $params = [])
     {
         $params['theme'] = $this;
 
