@@ -2,7 +2,7 @@
 
 namespace denis909\sbadmin2;
 
-class Theme extends \yii\base\Component
+class Theme extends \denis909\theme\Theme
 {
 
     const POPUP = Popup::class;

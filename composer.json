@@ -4,7 +4,8 @@
         "npm-asset/startbootstrap-sb-admin-2": "*",
         "denis909/yii2-glyphicons": "*",
         "denis909/yii2-menu": "*",
-        "denis909/yii2-fake-bootstrap4": "*"
+        "denis909/yii2-fake-bootstrap4": "*",
+        "denis909/yii2-theme": "*"
     },
     "autoload": {
         "psr-4": {
