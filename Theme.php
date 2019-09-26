@@ -2,6 +2,8 @@
 
 namespace denis909\sbadmin2;
 
+use yii\helpers\ArrayHelper;
+
 class Theme extends \denis909\bootstrap4\Theme
 {
 
@@ -42,7 +44,7 @@ class Theme extends \denis909\bootstrap4\Theme
 
     public function beginLayout(array $params = [])
     {
-        $params['theme'] = $this;
+        $params['theme'] = ArrayHelper::getValue($params, 'theme', $this);
 
         $class = static::LAYOUT;
 
@@ -58,7 +60,7 @@ class Theme extends \denis909\bootstrap4\Theme
 
     public function widget($class, array $params = [])
     {
-        $params['theme'] = $this;
+        $params['theme'] = ArrayHelper::getValue($params, 'theme', $this);
 
         return $class::widget($params);
     }
