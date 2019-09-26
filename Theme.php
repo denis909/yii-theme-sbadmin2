@@ -2,7 +2,7 @@
 
 namespace denis909\sbadmin2;
 
-class Theme extends \denis909\theme\Theme
+class Theme extends \denis909\bootstrap4\Theme
 {
 
     const POPUP = Popup::class;
