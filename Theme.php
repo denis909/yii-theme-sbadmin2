@@ -31,8 +31,6 @@ class Theme extends \denis909\bootstrap4\Theme
 
     const ASSETS = Assets::class;
 
-    const ACTION_COLUMN = ActionColumn::class;
-
     protected $_layout;
 
     public function registerAssets($view)
