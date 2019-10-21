@@ -31,6 +31,10 @@ class Theme extends \denis909\bootstrap4\Theme
 
     const ASSETS = Assets::class;
 
+    const TEST_ASSETS = TestAssets::class;
+
+    const TEST_LAYOUT = TestLayout::class;
+
     protected $_layout;
 
     public function registerAssets($view)
@@ -39,6 +43,13 @@ class Theme extends \denis909\bootstrap4\Theme
 
         return $class::register($view);
     }    
+
+    public function registerTestAssets($view)
+    {
+        $class = static::TEST_ASSETS;     
+
+        return $class::register($view);
+    }
 
     public function beginLayout(array $params = [])
     {
@@ -101,6 +112,11 @@ class Theme extends \denis909\bootstrap4\Theme
     public function mainLayout(array $params = [])
     {
         return $this->widget(static::MAIN_LAYOUT, $params);
+    }
+
+    public function testLayout(array $params = [])
+    {
+        return $this->widget(static::TEST_LAYOUT, $params);
     }
 
     public function popup(array $params = [])
