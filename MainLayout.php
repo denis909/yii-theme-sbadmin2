@@ -37,6 +37,8 @@ class MainLayout extends \yii\base\Widget
 
     public $messagesCount = 0;
 
+    public $breadcrumbs = [];
+
     public function run()
     {
         return $this->render('main-layout', [
@@ -55,7 +57,8 @@ class MainLayout extends \yii\base\Widget
             'infoMessages' => (array) $this->infoMessages,
             'successMessages' => (array) $this->successMessages,
             'messagesCount' => $this->messagesCount,
-            'messagesUrl' => $this->messagesUrl
+            'messagesUrl' => $this->messagesUrl,
+            'breadcrumbs' => $this->breadcrumbs
         ]);
     }
 

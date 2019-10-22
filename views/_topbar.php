@@ -11,6 +11,15 @@ use yii\helpers\Html;
     <i class="fa fa-bars"></i>
   </button>
 
+  <?php
+
+  if ($breadcrumbs)
+  {
+    echo $theme->breadcrumbs(['links' => $breadcrumbs]);
+  }
+
+  ?>
+
   <!-- Topbar Navbar -->
   <ul class="navbar-nav ml-auto">
     <?php
