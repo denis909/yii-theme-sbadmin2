@@ -28,6 +28,8 @@ class MainMenu extends \denis909\yii\Menu
 
     public $submenuClass = MainMenu2::class;
 
+    public $encodeLabels = false;
+
     public function renderItem($item)
     {
         $isActive = array_key_exists('active', $item) && $item['active'] ? true : false;

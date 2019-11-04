@@ -13,6 +13,8 @@ class MainMenu2 extends \denis909\yii\Menu
 
     public $iconTemplate = '<i class="{icon}"></i> <span>{label}</span>';
 
+    public $encodeLabels = false;
+
     protected function renderItem($item)
     {
         $isActive = array_key_exists('active', $item) && $item['active'] ? true : false;
