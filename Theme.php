@@ -37,6 +37,14 @@ class Theme extends \denis909\bootstrap4\Theme
 
     protected $_layout;
 
+    public $breadcrumbsOptions = [
+        'options' => [
+            'class' => 'mb-0',
+            'style' => 'background-color: inherit;'
+        ],
+        'homeLink' => false
+    ];
+
     public function registerAssets($view)
     {
         $class = static::ASSETS;     
