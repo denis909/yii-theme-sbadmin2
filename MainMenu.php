@@ -30,17 +30,31 @@ class MainMenu extends \denis909\yii\Menu
 
     public $encodeLabels = false;
 
+    public function beforeRenderItem($item)
+    {
+        $item = parent::beforeRenderItem($item);
+
+        $isActive = array_key_exists('active', $item) && $item['active'] ? true : false;
+
+        $hasItems = array_key_exists('items', $item);
+
+        if ($isActive && $hasItems)
+        {
+            $item['submenuTemplate'] = str_replace('class="collapse"', 'class="collapse show"', $item['submenuTemplate']);
+        }        
+
+        return $item;
+    }
+
     public function renderItem($item)
     {
         $isActive = array_key_exists('active', $item) && $item['active'] ? true : false;
 
         $return = parent::renderItem($item);
 
-        if ($isActive && !empty($item['_items']))
+        if ($isActive && !empty($item['items']))
         {
-            $return = str_replace('class="collapse"', 'class="collapse show"', $return);
-
-            $return = str_replace('class="nav-link"', 'class="nav-link collapse"', $return);
+            $return = str_replace('class="nav-link collapsed"', 'class="nav-link"', $return);
         }
 
         return $return;
