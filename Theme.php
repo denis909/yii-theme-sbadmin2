@@ -7,6 +7,8 @@ use yii\helpers\ArrayHelper;
 class Theme extends \denis909\bootstrap4\Theme
 {
 
+    const LOGIN_PAGE = LoginPage::class;
+
     const POPUP = Popup::class;
 
     const ALERT_MESSAGES = AlertMessages::class;
@@ -77,8 +79,6 @@ class Theme extends \denis909\bootstrap4\Theme
 
     public function widget($class, array $params = [])
     {
-        $params['theme'] = ArrayHelper::getValue($params, 'theme', $this);
-
         return $class::widget($params);
     }
 
@@ -114,7 +114,7 @@ class Theme extends \denis909\bootstrap4\Theme
 
     public function loginLayout(array $params = [])
     {
-        return $this->widget(static::LOGIN_LAYOUT, $params);
+        return $this->widget(static::LOGIN_LAYOUT, array_merge($params, ['theme' => $this]));
     }
 
     public function mainLayout(array $params = [])
@@ -141,5 +141,10 @@ class Theme extends \denis909\bootstrap4\Theme
     {
         return $this->widget(static::ALERT_MESSAGES, $params);
     } 
+
+    public function loginPage(array $params = [])
+    {
+        return $this->widget(static::LOGIN_PAGE, $params);
+    }
 
 }
