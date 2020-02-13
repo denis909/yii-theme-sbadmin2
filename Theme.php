@@ -84,7 +84,7 @@ class Theme extends \denis909\bootstrap4\Theme
 
     public function layout(array $params = [])
     {
-        return $this->widget(static::LAYOUT, $params);
+        return $this->widget(static::LAYOUT, array_merge($params, ['theme' => $this]));
     }
 
     public function gridView(array $params = [])
@@ -119,7 +119,7 @@ class Theme extends \denis909\bootstrap4\Theme
 
     public function mainLayout(array $params = [])
     {
-        return $this->widget(static::MAIN_LAYOUT, $params);
+        return $this->widget(static::MAIN_LAYOUT, array_merge($params, ['theme' => $this]));
     }
 
     public function testLayout(array $params = [])
