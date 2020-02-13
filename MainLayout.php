@@ -39,6 +39,10 @@ class MainLayout extends \yii\base\Widget
 
     public $breadcrumbs = [];
 
+    public $optionsMenu = [];
+
+    public $optionsLabel = 'Options';
+
     public function run()
     {
         return $this->render('main-layout', [
@@ -58,7 +62,9 @@ class MainLayout extends \yii\base\Widget
             'successMessages' => (array) $this->successMessages,
             'messagesCount' => $this->messagesCount,
             'messagesUrl' => $this->messagesUrl,
-            'breadcrumbs' => $this->breadcrumbs
+            'breadcrumbs' => $this->breadcrumbs,
+            'optionsMenu' => $this->optionsMenu,
+            'optionsLabel' => $this->optionsLabel
         ]);
     }
 
