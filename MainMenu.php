@@ -30,6 +30,8 @@ class MainMenu extends \denis909\yii\Menu
 
     public $encodeLabels = false;
 
+    public $optionsMenu = [];
+
     public function beforeRenderItem($item)
     {
         $item = parent::beforeRenderItem($item);
