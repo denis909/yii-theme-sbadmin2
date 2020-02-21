@@ -6,7 +6,7 @@
         "denis909/yii2-glyphicons": "*",
         "denis909/yii2-menu": "*",
         "denis909/yii2-fake-bootstrap4": "*",
-        "denis909/yii2-theme": "dev-master",
+        "denis909/yii2-theme": "*",
         "denis909/yii2-theme-bootstrap4": "*"
     },
     "autoload": {
