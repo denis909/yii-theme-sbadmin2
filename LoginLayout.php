@@ -11,12 +11,15 @@ class LoginLayout extends \yii\base\Widget
 
     public $enableImage = true;
 
+    public $imageUrl;
+
     public function run()
     {
         return $this->render('login-layout', [
             'content' => $this->content,
             'theme' => $this->theme,
-            'enableImage' => $this->enableImage
+            'enableImage' => $this->enableImage,
+            'imageUrl' => $this->imageUrl
         ]);
     }
 

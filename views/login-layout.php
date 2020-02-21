@@ -13,6 +13,20 @@ $theme->beginLayout();
       
         <?php if($enableImage):?>
 
+            <?php if($imageUrl):?>
+
+                <style type="text/css">
+
+                    .bg-login-image {
+                        background: url(<?= $imageUrl;?>);
+                        background-position: center;
+                        background-size: cover;
+                    }
+
+                </style>
+
+            <?php endif;?>
+
             <div class="col-xl-10 col-lg-12 col-md-9">
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
