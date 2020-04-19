@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\helpers\ArrayHelper;
+use yii\web\View;
 
 if ($logoUrl)
 {
@@ -51,4 +52,12 @@ $items = ArrayHelper::merge(
     ]
 );
 
-echo $theme->mainMenu(['items' => $items]);
+echo $theme->mainMenu([
+    'items' => $items,
+    'options' => [
+        'id' => 'accordionSidebar',
+        'class' => $sidebarToggled 
+            ? 'navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled' 
+            : 'navbar-nav bg-gradient-primary sidebar sidebar-dark accordion'
+    ]
+]);

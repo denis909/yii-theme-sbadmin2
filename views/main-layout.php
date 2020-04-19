@@ -3,6 +3,29 @@
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 
+$this->registerJs('$(document).on("click", "#sidebarToggle", function() {
+
+    if ($(".sidebar").hasClass("toggled")) 
+    {
+        document.cookie = "sbadmin2_sidebar_toggled=1";
+    }
+    else
+    {
+        document.cookie = "sbadmin2_sidebar_toggled=0";
+    }
+});');
+
+if (array_key_exists('sbadmin2_sidebar_toggled', $_COOKIE) && ($_COOKIE['sbadmin2_sidebar_toggled'] == 1))
+{
+    $this->params['bodyClass'] = trim(ArrayHelper::getValue($this->params, 'bodyClass') . ' sidebar-toggled');
+
+    $sidebarToggled = true;
+}
+else
+{
+    $sidebarToggled = false;
+}
+
 $theme->beginLayout();
 
 ?>
