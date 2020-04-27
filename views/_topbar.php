@@ -115,6 +115,17 @@ use yii\helpers\Html;
 
     <?php endif;?>
 
+    <?php if($alertsUrl):?>
+
+    <li class="nav-item dropdown no-arrow mx-1">
+      <a class="nav-link" href="<?= $alertsUrl;?>">
+        <i class="fas fa-bell fa-fw"></i>
+        <span class="badge badge-danger badge-counter"><?= $alertsCount;?></span>
+      </a>
+    </li>
+
+    <?php endif;?>
+
     <?php
 
     /*

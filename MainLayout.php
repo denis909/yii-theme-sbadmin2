@@ -43,6 +43,10 @@ class MainLayout extends \yii\base\Widget
 
     public $optionsLabel = 'Options';
 
+    public $alertsCount;
+
+    public $alertsUrl;
+
     public function run()
     {
         return $this->render('main-layout', [
@@ -64,7 +68,9 @@ class MainLayout extends \yii\base\Widget
             'messagesUrl' => $this->messagesUrl,
             'breadcrumbs' => $this->breadcrumbs,
             'optionsMenu' => $this->optionsMenu,
-            'optionsLabel' => $this->optionsLabel
+            'optionsLabel' => $this->optionsLabel,
+            'alertsCount' => $this->alertsCount,
+            'alertsUrl' => $this->alertsUrl
         ]);
     }
 
