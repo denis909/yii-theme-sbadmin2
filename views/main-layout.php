@@ -46,34 +46,35 @@ $theme->beginLayout();
     <!-- Begin Page Content -->
     <div class="container-fluid">
 
-      <!-- Page Heading -->
-      <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800"><?= Html::encode($this->title);?></h1>
-        <?php
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800"><?= Html::encode($this->title);?></h1>
+            <?php
 
-        if (!empty($this->params['actionMenu']))
-        {
-            echo '<div>';
+            if (!empty($this->params['actionMenu']))
+            {
+                echo '<div>';
 
-            echo Yii::$app->backendTheme->actionMenu(['items' => $this->params['actionMenu']]);
+                echo Yii::$app->backendTheme->actionMenu(['items' => $this->params['actionMenu']]);
+            
+                echo '</div>';
+            }
+
+            ?>
+              
+            <?php
+            /*  
+            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+            */
+            ?>
         
-            echo '</div>';
-        }
-
-        ?>
-      
-        <?php
-        /*  
-        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-        */
-        ?>
-      </div>
+        </div>
 
         <?= $theme->alertMessages(['messages' => $successMessages, 'type' => 'success']);?>
         <?= $theme->alertMessages(['messages' => $infoMessages, 'type' => 'info']);?>
         <?= $theme->alertMessages(['messages' => $errorMessages, 'type' => 'error']);?>
 
-        <?php if(array_key_exists('enableCard', $this->params) && $this->params['enableCard']):?>
+        <?php if($enableCard):?>
 
             <div class="card shadow mb-4">
                 <?php if(!empty($this->params['cardTitle'])):?>  
@@ -88,9 +89,9 @@ $theme->beginLayout();
 
         <?php else:?>
 
-        <?= $content;?>
+            <?= $content;?>
 
-      <?php endif;?>
+        <?php endif;?>
 
     </div>
     <!-- /.container-fluid -->
