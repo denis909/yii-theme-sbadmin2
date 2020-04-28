@@ -42,8 +42,8 @@ class MainMenu extends \denis909\yii\Menu
 
         if ($isActive && $hasItems)
         {
-            $item['submenuTemplate'] = str_replace('class="collapse"', 'class="collapse show"', $item['submenuTemplate']);
-        }        
+            $item['submenuTemplate'] = str_replace('class="collapse"', 'class="collapse show-medium"', $item['submenuTemplate']);
+        }
 
         return $item;
     }

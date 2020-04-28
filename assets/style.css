@@ -47,3 +47,10 @@ a.desc:after {
 .sort-ordinal a.desc:after {
     content: "\e156";
 }
+
+@media (min-width: 768px)
+{
+    ul.accordion:not(.toggled) .collapse.show-medium:not(.show) {
+        display: block;
+    }
+}
