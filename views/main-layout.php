@@ -7,11 +7,11 @@ $this->registerJs('$(document).on("click", "#sidebarToggle", function() {
 
     if ($(".sidebar").hasClass("toggled")) 
     {
-        document.cookie = "sbadmin2_sidebar_toggled=1";
+        document.cookie = "sbadmin2_sidebar_toggled=1; path=/";
     }
     else
     {
-        document.cookie = "sbadmin2_sidebar_toggled=0";
+        document.cookie = "sbadmin2_sidebar_toggled=0; path=/";
     }
 });');
 
