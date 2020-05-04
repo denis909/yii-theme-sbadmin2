@@ -37,6 +37,8 @@ class MainLayout extends \yii\base\Widget
 
     public $messagesCount = 0;
 
+    public $messagesIcon = 'fas fa-envelope fa-fw';
+
     public $breadcrumbs = [];
 
     public $optionsMenu = [];
@@ -66,6 +68,7 @@ class MainLayout extends \yii\base\Widget
             'successMessages' => (array) $this->successMessages,
             'messagesCount' => $this->messagesCount,
             'messagesUrl' => $this->messagesUrl,
+            'messagesIcon' => $this->messagesIcon,
             'breadcrumbs' => $this->breadcrumbs,
             'optionsMenu' => $this->optionsMenu,
             'optionsLabel' => $this->optionsLabel,

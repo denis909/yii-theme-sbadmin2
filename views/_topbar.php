@@ -105,10 +105,11 @@ use yii\helpers\Html;
 
     <li class="nav-item dropdown no-arrow mx-1">
       <a class="nav-link" href="<?= $messagesUrl;?>">
-        <i class="fas fa-envelope fa-fw"></i>
+        <i class="<?= $messagesIcon;?>"></i>
+
         <!-- Counter - Messages -->
         <?php if($messagesCount):?>
-            <span class="badge badge-danger badge-counter"><?= $messagesCount;?></span>
+            <span class="badge badge-info badge-counter"><?= $messagesCount;?></span>
         <?php endif;?>
       </a>
     </li>
