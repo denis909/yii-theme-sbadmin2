@@ -49,6 +49,10 @@ class MainLayout extends \yii\base\Widget
 
     public $alertsUrl;
 
+    public $topMenu = [];
+
+    public $topMenuOptions = [];
+
     public function run()
     {
         return $this->render('main-layout', [
@@ -73,7 +77,9 @@ class MainLayout extends \yii\base\Widget
             'optionsMenu' => $this->optionsMenu,
             'optionsLabel' => $this->optionsLabel,
             'alertsCount' => $this->alertsCount,
-            'alertsUrl' => $this->alertsUrl
+            'alertsUrl' => $this->alertsUrl,
+            'topMenuOptions' => $this->topMenuOptions,
+            'topMenu' => $this->topMenu
         ]);
     }
 

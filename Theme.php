@@ -29,13 +29,17 @@ class Theme extends \denis909\bootstrap4\Theme
 
     const USER_MENU = UserMenu::class;
 
-    const MAIN_MENU = MainMenu::class;    
+    const MAIN_MENU = MainMenu::class;
+
+    const TOP_MENU = TopMenu::class;    
 
     const ASSETS = Assets::class;
 
     const TEST_ASSETS = TestAssets::class;
 
     const TEST_LAYOUT = TestLayout::class;
+
+    const USER_ACCOUNT = UserAccount::class;
 
     protected $_layout;
 
@@ -110,7 +114,12 @@ class Theme extends \denis909\bootstrap4\Theme
     public function mainMenu(array $params = [])
     {
         return $this->widget(static::MAIN_MENU, $params);
-    }    
+    }
+
+    public function topMenu(array $params = [])
+    {
+        return $this->widget(static::TOP_MENU, $params);
+    }
 
     public function loginLayout(array $params = [])
     {
@@ -145,6 +154,11 @@ class Theme extends \denis909\bootstrap4\Theme
     public function loginPage(array $params = [])
     {
         return $this->widget(static::LOGIN_PAGE, $params);
+    }
+
+    public function userAccount(array $params = [])
+    {
+        return $this->widget(static::USER_ACCOUNT, array_merge($params, ['theme' => $this]));
     }
 
 }
