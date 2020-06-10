@@ -10,7 +10,7 @@
     },
     "autoload": {
         "psr-4": {
-            "denis909\\sbadmin2\\": ""
+            "denis909\\themes\\sbadmin2\\": ""
         }
     }
 }

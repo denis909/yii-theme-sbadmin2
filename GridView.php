@@ -1,6 +1,6 @@
 <?php
 
-namespace denis909\sbadmin2;
+namespace denis909\themes\sbadmin2;
 
 class GridView extends \yii\grid\GridView
 {
