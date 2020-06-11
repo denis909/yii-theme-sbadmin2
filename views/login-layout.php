@@ -1,10 +1,11 @@
 <?php
 
 use yii\helpers\Html;
+use backend\theme\Layout;
 
 $this->params['bodyClass'] = 'bg-gradient-primary';
 
-$theme->beginLayout();
+$layout = Layout::begin($layoutOptions);
 
 ?>
 <div class="container">
@@ -66,4 +67,4 @@ $theme->beginLayout();
 
     </div>
 </div>
-<?php $theme->endLayout();?>
+<?php $layout->end();?>

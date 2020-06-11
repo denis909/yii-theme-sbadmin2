@@ -11,12 +11,14 @@ class UserAccount extends \yii\base\Widget
 
     public $userMenuOptions = [];
 
-    public $theme;
-
     public function run()
     {
+        if (!$this->user)
+        {
+            return;
+        }
+
         return $this->render('user-account', [
-            'theme' => $this->theme,
             'userMenu' => $this->userMenu,
             'user' => $this->user
         ]);

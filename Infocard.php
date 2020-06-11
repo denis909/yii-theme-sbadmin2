@@ -11,13 +11,10 @@ class Infocard extends \yii\base\Widget
 
     public $icon;
 
-    public $theme;
-
     public function run()
     {
         return $this->render('infocard', [
             'content' => $this->content,
-            'theme' => $this->theme,
             'label' => $this->label,
             'icon' => $this->icon
         ]);

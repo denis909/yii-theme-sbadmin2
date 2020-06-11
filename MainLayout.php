@@ -2,22 +2,14 @@
 
 namespace denis909\themes\sbadmin2;
 
-class MainLayout extends \yii\base\Widget
+class MainLayout extends \denis909\theme\MainLayout
 {
 
-    public $content;
-
-    public $theme;
-
-    public $actionMenu;
+    public $actionMenu = [];
 
     public $userMenu = [];
 
-    public $mainMenu;
-
-    public $enableCard;
-
-    public $cardTitle;
+    public $mainMenu = [];
 
     public $user;
 
@@ -26,12 +18,6 @@ class MainLayout extends \yii\base\Widget
     public $copyright = 'Copyright &copy; Your Website 2019';
 
     public $logoUrl;
-
-    public $errorMessages = [];
-
-    public $successMessages = [];
-
-    public $infoMessages = [];
 
     public $messagesUrl;
 
@@ -53,11 +39,12 @@ class MainLayout extends \yii\base\Widget
 
     public $topMenuOptions = [];
 
+    public $layoutOptions = [];
+
     public function run()
     {
         return $this->render('main-layout', [
             'content' => $this->content,
-            'theme' => $this->theme,
             'actionMenu' => $this->actionMenu,
             'userMenu' => $this->userMenu,
             'mainMenu' => $this->mainMenu,
@@ -79,7 +66,8 @@ class MainLayout extends \yii\base\Widget
             'alertsCount' => $this->alertsCount,
             'alertsUrl' => $this->alertsUrl,
             'topMenuOptions' => $this->topMenuOptions,
-            'topMenu' => $this->topMenu
+            'topMenu' => $this->topMenu,
+            'layoutOptions' => $this->layoutOptions
         ]);
     }
 

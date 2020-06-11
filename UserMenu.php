@@ -8,8 +8,6 @@ use yii\helpers\ArrayHelper;
 class UserMenu extends \yii\widgets\Menu
 {
 
-    public $theme;
-
     public $options = [
         'tag' => 'div',
         'class' => 'dropdown-menu dropdown-menu-right shadow animated--grow-in',

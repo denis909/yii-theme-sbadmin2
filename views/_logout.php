@@ -1,8 +1,9 @@
 <?php
 
 use yii\helpers\Html;
+use denis909\themes\sbadmin2\Popup;
 
-echo $theme->popup([
+echo Popup::widget([
     'title' => 'Ready to Leave?',
     'content' => 'Select "Logout" below if you are ready to end your current session.',
     'footer' => Html::beginForm($logoutUrl, 'post') 

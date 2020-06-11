@@ -5,8 +5,6 @@ namespace denis909\themes\sbadmin2;
 class AlertMessages extends \yii\base\Widget
 {
 
-    public $theme;
-
     public $messages;
 
     public $type = 'errors';
@@ -15,8 +13,7 @@ class AlertMessages extends \yii\base\Widget
     {
         return $this->render('alert-messages', [
             'type' => $this->type,
-            'messages' => (array) $this->messages,
-            'theme' => $this->theme
+            'messages' => (array) $this->messages
         ]);
     }
 

@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
+use denis909\themes\sbadmin2\Layout;
+use denis909\themes\sbadmin2\AlertMessages;
+use denis909\themes\sbadmin2\ActionMenu;
 
 $this->registerJs('$(document).on("click", "#sidebarToggle", function() {
 
@@ -26,7 +29,7 @@ else
     $sidebarToggled = false;
 }
 
-$theme->beginLayout();
+$layout = Layout::begin($layoutOptions);
 
 ?>
 
@@ -55,7 +58,7 @@ $theme->beginLayout();
             {
                 echo '<div>';
 
-                echo Yii::$app->backendTheme->actionMenu(['items' => $this->params['actionMenu']]);
+                echo ActionMenu::widget(['items' => $this->params['actionMenu']]);
             
                 echo '</div>';
             }
@@ -70,9 +73,9 @@ $theme->beginLayout();
         
         </div>
 
-        <?= $theme->alertMessages(['messages' => $successMessages, 'type' => 'success']);?>
-        <?= $theme->alertMessages(['messages' => $infoMessages, 'type' => 'info']);?>
-        <?= $theme->alertMessages(['messages' => $errorMessages, 'type' => 'error']);?>
+        <?= AlertMessages::widget(['messages' => $successMessages, 'type' => 'success']);?>
+        <?= AlertMessages::widget(['messages' => $infoMessages, 'type' => 'info']);?>
+        <?= AlertMessages::widget(['messages' => $errorMessages, 'type' => 'error']);?>
 
         <?php if($enableCard):?>
 
@@ -124,4 +127,4 @@ $theme->beginLayout();
 
 <?php require __DIR__ . '/_logout.php';?>
 
-<?php $theme->endLayout();?>
+<?php $layout::end();?>

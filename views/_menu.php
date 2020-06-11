@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\helpers\ArrayHelper;
 use yii\web\View;
+use denis909\themes\sbadmin2\MainMenu;
 
 if ($logoUrl)
 {
@@ -52,7 +53,7 @@ $items = ArrayHelper::merge(
     ]
 );
 
-echo $theme->mainMenu([
+echo MainMenu::widget([
     'items' => $items,
     'options' => [
         'id' => 'accordionSidebar',

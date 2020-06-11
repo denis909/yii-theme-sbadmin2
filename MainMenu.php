@@ -7,8 +7,6 @@ use yii\helpers\ArrayHelper;
 class MainMenu extends \denis909\yii\Menu
 {
 
-    public $theme;
-
     public $activateParents = true;
 
     public $options = [

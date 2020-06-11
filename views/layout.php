@@ -2,8 +2,9 @@
 
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
+use denis909\themes\sbadmin2\Assets;
 
-$theme->registerAssets($this);
+Assets::register($this);
 
 ?>
 <?php $this->beginPage();?>

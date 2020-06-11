@@ -1,6 +1,8 @@
 <?php
 
 use yii\helpers\Html;
+use denis909\themes\sbadmin2\TopMenu;
+use denis909\themes\sbadmin2\UserAccount;
 
 ?>
 <!-- Topbar -->
@@ -18,25 +20,22 @@ use yii\helpers\Html;
         echo $theme->breadcrumbs(['links' => $breadcrumbs]);
     }
 
-    echo $theme->topMenu(
+    echo TopMenu::widget(
         array_merge(
             $topMenuOptions, 
             [
-                'items' => array_merge(
-                  $topMenu, 
-                  [
+                'items' => array_merge($topMenu, [
                     'account' => [
-                      'template' => $theme->userAccount([
-                        'user' => $user,
-                        'userMenu' => $userMenu,
-                        //'userMenuOptions' => $userMenuOptions
-                      ]),
-                      'options' => [
-                        'class' => 'nav-item dropdown no-arrow'
-                      ]
+                        'template' => UserAccount::widget([
+                            'user' => $user,
+                            'userMenu' => $userMenu,
+                            //'userMenuOptions' => $userMenuOptions
+                        ]),
+                        'options' => [
+                            'class' => 'nav-item dropdown no-arrow'
+                        ]
                     ]
-                  ]
-                )
+                ])
             ]
         )
     );
