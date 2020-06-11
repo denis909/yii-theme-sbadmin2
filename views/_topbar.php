@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use denis909\themes\sbadmin2\TopMenu;
 use denis909\themes\sbadmin2\UserAccount;
+use denis909\themes\sbadmin2\Breadcrumbs;
 
 ?>
 <!-- Topbar -->
@@ -17,7 +18,7 @@ use denis909\themes\sbadmin2\UserAccount;
 
     if ($breadcrumbs)
     {
-        echo $theme->breadcrumbs(['links' => $breadcrumbs]);
+        echo Breadcrumbs::widget(['links' => $breadcrumbs]);
     }
 
     echo TopMenu::widget(
