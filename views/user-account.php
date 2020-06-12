@@ -14,4 +14,4 @@ use denis909\themes\sbadmin2\UserMenu;
  
 </a>
 
-<?= UserMenu::widgets(['items' => $userMenu]);?>
+<?= UserMenu::widget(['items' => $userMenu]);?>
