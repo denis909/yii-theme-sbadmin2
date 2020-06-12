@@ -1,7 +1,6 @@
 {
     "name": "denis909/yii2-theme-sbadmin2",
     "require": {
-        "yiisoft/yii2-bootstrap4": "^2.0",
         "npm-asset/startbootstrap-sb-admin-2": "^4.0",
         "denis909/yii2-glyphicons": "*",
         "denis909/yii2-menu": "*",
