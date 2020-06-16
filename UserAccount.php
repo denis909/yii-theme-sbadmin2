@@ -9,7 +9,15 @@ class UserAccount extends \yii\base\Widget
 
     public $userMenu = [];
 
-    public $userMenuOptions = [];
+    public $accountMenu = [];
+
+    public $accountMenuClass = AccountMenu::class;
+
+    public $userMenuClass = UserMenu::class;
+
+    public $avatarUrl;
+
+    public $username;
 
     public function run()
     {
@@ -20,7 +28,12 @@ class UserAccount extends \yii\base\Widget
 
         return $this->render('user-account', [
             'userMenu' => $this->userMenu,
-            'user' => $this->user
+            'user' => $this->user,
+            'accountMenuClass' => $this->accountMenuClass,
+            'userMenuClass' => $this->userMenuClass,
+            'accountMenu' => $this->accountMenu,
+            'avatarUrl' => $this->avatarUrl,
+            'username' => $this->username
         ]);
     }
 

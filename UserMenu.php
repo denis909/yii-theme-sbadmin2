@@ -54,6 +54,8 @@ class UserMenu extends \yii\widgets\Menu
         return parent::renderItem($item);
     }
 
+    /*
+
     public function run()
     {
         if ($this->items)
@@ -73,5 +75,6 @@ class UserMenu extends \yii\widgets\Menu
 
         return parent::run();
     }
+    */
 
 }

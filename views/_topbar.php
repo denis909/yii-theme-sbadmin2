@@ -30,7 +30,8 @@ use denis909\themes\sbadmin2\Breadcrumbs;
                         'template' => UserAccount::widget([
                             'user' => $user,
                             'userMenu' => $userMenu,
-                            //'userMenuOptions' => $userMenuOptions
+                            'accountMenu' => $accountMenu,
+                            'username' => $username
                         ]),
                         'options' => [
                             'class' => 'nav-item dropdown no-arrow'
