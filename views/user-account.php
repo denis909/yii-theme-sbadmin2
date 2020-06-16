@@ -13,7 +13,7 @@ use denis909\themes\sbadmin2\UserMenu;
 
     <?php else:?>
 
-        <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+        <i class="fa fa-fw fa-user"></i>
 
     <?php endif;?>
     
