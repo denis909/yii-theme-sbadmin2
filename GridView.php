@@ -12,6 +12,8 @@ class GridView extends \yii\grid\GridView
 
     public $tableOptions = ['class' => 'table table-striped table-bordered'];
 
+    public $captionOptions = ['style' => 'caption-side: top;'];
+
     public $pager = ['class' => LinkPager::class];
 
 }
