@@ -2,9 +2,7 @@
 
 namespace denis909\themes\sbadmin2;
 
-use yii\web\AssetBundle;
-
-class Assets extends AssetBundle
+class Assets extends \yii\web\AssetBundle
 {
 
     public $sourcePath = '@npm/startbootstrap-sb-admin-2';
@@ -16,6 +14,8 @@ class Assets extends AssetBundle
     ];
     
     public $js = [
+        ['vendor/jquery/jquery.min.js', 'position' => \yii\web\View::POS_HEAD],
+        ['vendor/bootstrap/js/bootstrap.bundle.min.js', 'position' => \yii\web\View::POS_HEAD],
         'vendor/jquery-easing/jquery.easing.min.js',
         'js/sb-admin-2.min.js',
         'vendor/chart.js/Chart.min.js'
@@ -23,11 +23,11 @@ class Assets extends AssetBundle
     
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\web\JqueryAsset',
-        'yii\bootstrap4\BootstrapAsset',
-        'yii\bootstrap4\BootstrapPluginAsset',
+        'yii\web\JqueryAsset', // empty
+        'yii\bootstrap4\BootstrapAsset', // empty
+        'yii\bootstrap4\BootstrapPluginAsset', // empty
         'denis909\yii\GlyphiconsAsset',
-        AssetsLocal::class
+        'denis909\themes\sbadmin2\AssetsLocal'
     ];
 
 }
